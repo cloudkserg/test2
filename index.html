@@ -212,8 +212,8 @@ const slides=document.querySelectorAll('.slide')
 let i=0
 function show(){
   slides.forEach((s,idx)=>s.classList.toggle('active',idx===i));
-  document.querySelector('.controls button:first-child').style.display = i===0 ? 'none' : 'inline-block';
-  document.querySelector('.controls button:last-child').style.display = i===slides.length-1 ? 'none' : 'inline-block';
+  document.querySelector('.controls button:first-child').style.visibility = i===0 ? 'hidden' : 'visible';
+  document.querySelector('.controls button:last-child').style.visibility = i===slides.length-1 ? 'hidden' : 'visible';
 }
 function next(){i=Math.min(slides.length-1,i+1);show()}
 function prev(){i=Math.max(0,i-1);show()}
