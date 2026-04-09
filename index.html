@@ -138,20 +138,22 @@ button{padding:10px 16px;border-radius:20px;border:none;background:var(--accent)
 </div>
 </div>
 
-<!-- SLIDE JUDGMENT -->
+<!-- SLIDE ANXIETY -->
 <div class="slide">
 <div class="frame">
 <div class="left">
-<h2>The Cat’s Judgment</h2>
-<div class="box">New smell detected</div>
-<div class="box">Trust level: low</div>
-<div class="box">👉 You are now under investigation</div>
-<div class="small">Insight: before anything else, the cat must evaluate your decision.</div>
+<h2>Stress &amp; Anxiety Spike</h2>
+<div class="box">⚠️ Unknown smell detected — threat assessment initiated</div>
+<div class="box">Cats rely on scent as their primary safety signal. A sudden new smell = potential danger in cat logic.</div>
+<div class="box">• Cortisol levels rise within seconds of detecting unfamiliar floral scents</div>
+<div class="box">• Symptoms: flattened ears, dilated pupils, hiding, excessive grooming</div>
+<div class="box">• Recovery time: 30 min to several hours depending on cat sensitivity</div>
+<div class="small">Insight: what feels romantic to you registers as a threat alert to the cat's nervous system.</div>
 </div>
 <div class="right">
 <div style="position:relative;width:90%;height:90%">
 <img src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif">
-<div class="caption">Suspicion mode activated</div>
+<div class="caption">Stress response: activated</div>
 </div>
 </div>
 </div>
@@ -166,8 +168,9 @@ button{padding:10px 16px;border-radius:20px;border:none;background:var(--accent)
 <div class="box">• Water on the floor, table, and sometimes electronics 💧</div>
 <div class="box">• Broken vase or damaged items 🏺</div>
 <div class="box">• Petals everywhere + surprise cleanup 🧹</div>
-<div class="box">Hidden cost: time + effort + mild emotional damage</div>
-<div class="small">Insight: the gift converts into maintenance almost instantly.</div>
+        <div class="box">Hidden cost: time + effort + mild emotional damage</div>
+        <div class="box">⚠️ Toxic risk: lilies, tulips, and daffodils are poisonous to cats — even small ingestion can cause kidney failure</div>
+        <div class="small">Insight: the gift converts into maintenance almost instantly.</div>
 </div>
 <div class="right">
 <div style="position:relative;width:90%;height:90%">
@@ -210,9 +213,11 @@ let i=0
 function show(){
   slides.forEach((s,idx)=>s.classList.toggle('active',idx===i));
   document.querySelector('.controls button:first-child').style.display = i===0 ? 'none' : 'inline-block';
+  document.querySelector('.controls button:last-child').style.display = i===slides.length-1 ? 'none' : 'inline-block';
 }
 function next(){i=Math.min(slides.length-1,i+1);show()}
 function prev(){i=Math.max(0,i-1);show()}
+show()
 </script>
 </body>
 </html>
